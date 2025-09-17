@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "horrorsfromfog",
+  "version": "${version}",
+  "name": "Horrors From Fog",
+  "description": "Adds horror mobs with Mod Menu + Cloth Config integration.",
+  "authors": ["Generated"],
+  "license": "MIT",
+  "icon": "assets/horrors/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.jared.horrors.HorrorsMod"
+    ],
+    "client": [
+      "com.jared.horrors.client.HorrorsClientMod"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.14.0",
+    "fabric": "*",
+    "modmenu": "*",
+    "cloth-config": "*"
+  }
+}

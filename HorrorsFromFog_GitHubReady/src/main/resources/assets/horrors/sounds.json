@@ -1,0 +1,6 @@
+{
+  "man_warning": [{"name":"horrors/sounds/man_warning.wav","stream":false}],
+  "boil_warning": [{"name":"horrors/sounds/boil_warning.wav","stream":false}],
+  "cave_warning": [{"name":"horrors/sounds/cave_warning.wav","stream":false}],
+  "goat_warning": [{"name":"horrors/sounds/goat_warning.wav","stream":false}]
+}

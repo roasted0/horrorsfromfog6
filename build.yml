@@ -1,0 +1,26 @@
+name: Build Fabric Mod (install Gradle)
+on:
+  push:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+      - name: Install Gradle via apt-get
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gradle
+          gradle -v
+      - name: Build
+        run: gradle build --no-daemon
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: horrorsfromfog-jar
+          path: build/libs/*.jar
